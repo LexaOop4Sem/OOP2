@@ -14,7 +14,8 @@ int main()
 	//shapes.emplace_back(std::make_shared<Rhomb>(Point(1, 5), Point(8, 1), Point(7, 5), Point(8, 9)));
 	//shapes.emplace_back(std::make_shared<Rhomb>(Point(1, 5), Point(9, 5), Point(5, 1), Point(5, 9)));
 	//shapes.emplace_back(std::make_shared<Rhomb>(Point(1, 5), Point(9, 5), Point(5, 1), Point(5, 9)));
-	shapes.emplace_back(std::make_shared<Rhomb>(Point(5, 5)));
+	shapes.emplace_back(std::make_shared<Rhomb>(Point(15, 23)));
+	shapes.emplace_back(std::make_shared<Rhomb>(Point(33, 23)));
 
 	shapes.emplace_back(std::make_shared<Square>(Point(10, 1), Point(38, 16))); // Шляпа 
 
@@ -35,7 +36,7 @@ int main()
 	shapes.emplace_back(std::make_shared<Square>(p1, p2)); // Голова 
 
 	Point eyeLeft = shapes[shapes.size() - 1]->getLeftTop();
-	eyeLeft.setX(eyeLeft.getX() + 2);
+	eyeLeft.setX(eyeLeft.getX() + 5);
 	eyeLeft.setY(eyeLeft.getY() + 2);
 	Point eyeRight = Point(eyeLeft.getX()+2, eyeLeft.getY());
 	shapes.emplace_back(std::make_shared<Line>(eyeLeft, eyeRight)); // Левый глаз 
@@ -43,7 +44,7 @@ int main()
 
 
 	eyeRight = shapes[shapes.size() - 2]->getRightTop();
-	eyeRight.setX(eyeRight.getX() - 2);
+	eyeRight.setX(eyeRight.getX() - 5);
 	eyeRight.setY(eyeRight.getY() + 2);
 	eyeLeft = Point(eyeRight.getX() - 2, eyeRight.getY());
 	shapes.emplace_back(std::make_shared<Line>(eyeLeft, eyeRight)); // Правый глаз 
@@ -53,7 +54,7 @@ int main()
 	std::shared_ptr<Shape> rightEye = shapes[shapes.size() - 1];
 	Point nose = Point(leftEye->getRightTop().getX() +
 		(rightEye->getLeftTop().getX() - leftEye->getRightTop().getX()) / 2,
-		leftEye->getRightTop().getY() + 2);
+		leftEye->getRightTop().getY() + 9);
 	shapes.emplace_back(std::make_shared<Line>(nose, nose)); // Нос 
 
 	std::shared_ptr<Shape> head = shapes[shapes.size() - 4];
