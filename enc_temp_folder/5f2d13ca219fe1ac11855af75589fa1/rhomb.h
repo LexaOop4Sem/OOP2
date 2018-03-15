@@ -15,6 +15,11 @@ public:
 	/*Rhomb(const Point& left, const Point& top,const Point& right, const Point& bottom)*/
 	Rhomb(const Point& dot)
 	{
+		
+
+
+
+
 		_leftRight = new Line(Point(dot.getX() -4, dot.getY()), Point(dot.getX()+4, dot.getY()));
 		_leftTop = new Line(Point(dot.getX() - 4, dot.getY()), Point(dot.getX() , dot.getY()-4));
 		_topRight = new Line(Point(dot.getX(), dot.getY()-4), Point(dot.getX() + 4, dot.getY()));

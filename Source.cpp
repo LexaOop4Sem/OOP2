@@ -12,7 +12,9 @@ int main()
 
 	std::vector<std::shared_ptr<Shape>> shapes;
 	//shapes.emplace_back(std::make_shared<Rhomb>(Point(1, 5), Point(8, 1), Point(7, 5), Point(8, 9)));
-	shapes.emplace_back(std::make_shared<Rhomb>(Point(1, 5), Point(9, 5), Point(5, 1), Point(5, 9)));
+	//shapes.emplace_back(std::make_shared<Rhomb>(Point(1, 5), Point(9, 5), Point(5, 1), Point(5, 9)));
+	//shapes.emplace_back(std::make_shared<Rhomb>(Point(1, 5), Point(9, 5), Point(5, 1), Point(5, 9)));
+	shapes.emplace_back(std::make_shared<Rhomb>(Point(5, 5)));
 
 	shapes.emplace_back(std::make_shared<Square>(Point(10, 1), Point(38, 16))); // Ўл€па 
 
