@@ -111,12 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cross.h" />
     <ClInclude Include="line.h" />
     <ClInclude Include="point.h" />
+    <ClInclude Include="rhomb.h" />
     <ClInclude Include="screen.h" />
     <ClInclude Include="shape.h" />
     <ClInclude Include="square.h" />
